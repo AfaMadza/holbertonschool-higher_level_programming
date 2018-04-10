@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-for i in range(0x0, 0x63):
-        h = hex(i)
-        print("{:d} = {:s}".format(i, h))
+for i in range(97, 123):
+    if i != 113 and i != 101:
+        print("{:c}".format(i), end="")
