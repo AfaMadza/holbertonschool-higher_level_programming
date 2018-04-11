@@ -29,7 +29,7 @@ listint_t *insert_node(listint_t **head, int number)
 			if ((temp->next)->n > number)
 				break;
 		}
-		else if (temp->next == NULL)
+		else if (number > temp->n)
 		{
 			list_position = 3;
 			break;
