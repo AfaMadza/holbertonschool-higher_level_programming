@@ -23,16 +23,16 @@ listint_t *insert_node(listint_t **head, int number)
 			list_position = 1;
 			break;
 		}
-		else if (number > temp->n && number < (temp->next)->n)
+		else if (number > temp->n && temp->next == NULL)
+		{
+				list_position = 3;
+				break;
+		}
+		else
 		{
 			list_position = 2;
 			if ((temp->next)->n > number)
 				break;
-		}
-		else if (number > temp->n)
-		{
-			list_position = 3;
-			break;
 		}
 		temp = temp->next;
 	}
