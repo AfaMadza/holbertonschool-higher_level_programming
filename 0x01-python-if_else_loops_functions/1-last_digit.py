@@ -4,7 +4,7 @@ number = random.randint(-10000, 10000)
 if number < 0:
     flag = 1
     pos_num = -1 * number
-elif number > 0:
+else:
     flag = 0
     pos_num = number
 n = pos_num % 10
