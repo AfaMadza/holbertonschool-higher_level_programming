@@ -8,12 +8,15 @@
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *temp;
+	listint_t *temp, *n_node = NULL;
 	int list_position;
 	unsigned int index = 0;
 
 	if (*head == NULL)
+	{
+		n_node->next = *head;
 		add_nodeint(head, number);
+	}
 	temp = *head;
 	while (temp != NULL)
 	{
