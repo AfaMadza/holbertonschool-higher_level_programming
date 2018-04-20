@@ -6,8 +6,8 @@ def roman_to_int(roman_string):
         return 0
     roman_num = 0
     std_not = {'I': 1, 'V': 5, 'X': 10,
-                    'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-    sub_not = {'IV':4, 'IX':9, 'XL': 40, 'XC':90, 'CD':400, 'CM':900}
+               'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    sub_not = {'IV': 4, 'IX': 9, 'XL': 40, 'XC': 90, 'CD': 400, 'CM': 900}
     for x in sub_not.keys():
         if x in roman_string:
             roman_num += sub_not[x]
