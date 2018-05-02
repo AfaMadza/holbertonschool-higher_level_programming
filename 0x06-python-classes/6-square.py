@@ -15,8 +15,10 @@ class Square:
 
     Args:
         size (int): size of square
+        position (tuple): position where # will be printed
     Attributes:
         size: (int): size of square
+        position (tuple): position where # will be printed
     """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -26,7 +28,6 @@ class Square:
     @property
     def size(self):
         """ Getter property for size. Setter below"""
-
         return self.__size
 
     @size.setter
@@ -46,14 +47,17 @@ class Square:
     def position(self, value):
         if isinstance(value, tuple):
             if isinstance(value[0], int) and isinstance(value[1], int):
-                if value[0] and value[1]:
+                if value[0] >= 0 and value[1] >= 0:
                     self.__position = value
         else:
             raise TypeError('position must be a tuple of 2 positive integers')
 
     def area(self):
-        """Method docstring Returns: Area of square """
+        """Method docstring
 
+        Args: None
+
+        Returns: Area of square """
         return self.__size * self.__size
 
     def my_print(self):
@@ -61,10 +65,11 @@ class Square:
 
         if self.__size == 0:
             print()
-        for k in range(self.__position[1]):
-            print()
-        for i in range(self.__size):
-            print(" " * self.__position[0], end="")
-            for j in range(self.__size):
-                print("{:s}".format('#'), end="")
-            print()
+        else:
+            for k in range(self.__position[1]):
+                print()
+            for i in range(self.__size):
+                print(" " * self.__position[0], end="")
+                for j in range(self.__size):
+                    print("{:s}".format('#'), end="")
+                print()
