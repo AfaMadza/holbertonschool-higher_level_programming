@@ -21,7 +21,7 @@ def text_indentation(text):
                 if nl[i + 1] == ' ' and nl[i + 2] != ' ':
                     nl[i + 1] = '\n\n'
                 elif nl[i + 1] == ' ' and nl[i + 2] == ' ':
-                    nl[i + 1] ='\n\n'
+                    nl[i + 1] = '\n\n'
                     nl[i + 2] = ""
     except:
         raise TypeError('text must be a string')
