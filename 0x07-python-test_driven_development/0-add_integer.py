@@ -9,9 +9,9 @@ def add_integer(a, b=98):
         a (int, float): first number
         b (int, float): second number
     Return (int): a + b"""
-    if a == None:
+    if a is None:
         raise TypeError('a must be an integer')
-    if b == None:
+    if b is None:
         raise TypeError('b must be an integer')
     if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError('a must be an integer')
