@@ -1,0 +1,74 @@
+=================
+3-say_my_name.py
+=================
+
+This function prints a series of strings.
+Test cases are below.
+
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Strings
+=======
+
+>>> say_my_name("Afa", "Madza")
+My name is Afa Madza
+
+>>> say_my_name("Madza")
+My name is Madza 
+
+>>> say_my_name("    ", "    ")
+My name is          
+
+>>> say_my_name(" ", " ")
+My name is    
+
+>>> say_my_name(" ", "Madza")
+My name is   Madza
+
+Errors
+======
+
+>>> say_my_name("Madza", 8)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name("Madza", 6.9)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+
+>>> say_my_name(8, "Madza")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(6.9, "Madza")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+Other Data Structures
+=====================
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name({'k': 1}, "Madza")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+
+>>> say_my_name(('D', 'K'), "Kwok")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(['D', 'K'], 'D')
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Derek", ['D', 'K'])
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name("Derek", ('D', 'K'))
+Traceback (most recent call last):
+TypeError: last_name must be a string

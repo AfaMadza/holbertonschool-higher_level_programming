@@ -1,0 +1,59 @@
+=====================
+5-text_indentation.py
+=====================
+
+This function inserts two new lines after these: . ? :
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+>>> text_indentation(".")
+.
+<BLANKLINE>
+
+>>> text_indentation("?")
+?
+<BLANKLINE>
+
+>>> text_indentation(":")
+:
+<BLANKLINE>
+>>> text_indentation(":::")
+:
+<BLANKLINE>
+:
+<BLANKLINE>
+:
+<BLANKLINE>
+
+>>> text_indentation("1.  2.  3.  ")
+1.
+<BLANKLINE>
+2.
+<BLANKLINE>
+3.
+<BLANKLINE>
+
+>>> text_indentation("1.  2.  3.")
+1.
+<BLANKLINE>
+2.
+<BLANKLINE>
+3.
+<BLANKLINE>
+
+>>> text_indentation(".?:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+
+>>> text_indentation(6)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation({'k': 1})
+Traceback (most recent call last):
+TypeError: text must be a string
