@@ -22,7 +22,7 @@ At the end of this project, students should be able to explain and understand:
 
 ### New commands / concepts learned
 
-* ``staticmethod``, ``classmethod``, ``__str__`, ``__repr__``
+* ``staticmethod``, ``classmethod``, ``__str__``, ``__repr__``
 
 ## Author
 
