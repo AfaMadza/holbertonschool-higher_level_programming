@@ -26,7 +26,7 @@ class Rectangle:
         Width Getter: returns width
         Setter below
         """
-        return self.width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -42,7 +42,7 @@ class Rectangle:
         Height Getter: gets height
         Setter below
         """
-        return self.height
+        return self.__height
 
     @height.setter
     def height(self, value):
