@@ -20,9 +20,9 @@ class Rectangle:
             width: width of rectangle
             height: height of rectangle
         """
-        type(self).number_of_instances += 1
-        self.height = height
+        Rectangle.number_of_instances += 1
         self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -96,7 +96,7 @@ class Rectangle:
         """
         __del__ magic method
         """
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     @staticmethod
@@ -111,9 +111,11 @@ class Rectangle:
             raise TypeError('rect_1 must be an instance of Rectangle')
         if type(rect_2) is not Rectangle:
             raise TypeError('rect_2 must be an instance of Rectangle')
-        if rect_1.area() >= rect_2.area():
+        if rect_1.area() == rect_2.area():
             return rect_1
-        if rect_1.area() < rect_2.area():
+        elif rect_1.area() > rect_2.area():
+            return rect_1
+        else:
             return rect_2
 
     @classmethod
