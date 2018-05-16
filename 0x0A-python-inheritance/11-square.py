@@ -23,3 +23,25 @@ class Rectangle(BaseGeometry):
         super().integer_validator("height", height)
         self.__width = width
         self.__height = height
+
+    def area(self):
+        """area implementation"""
+        return self.__width * self.__height
+
+    def __str__(self):
+        """
+        __str__ - string magic method
+        """
+        return "[{}] {}/{}".format(type(self).__name__,
+                                   self.__width, self.__height)
+
+
+class Square(Rectangle):
+    """Square - Inherits from Rectangle"""
+    def __init__(self, size):
+        """
+        __init__ - instantiation for Square
+        """
+        self.integer_validator("size", size)
+        self.__size = size
+        super().__init__(self.__size, self.__size)

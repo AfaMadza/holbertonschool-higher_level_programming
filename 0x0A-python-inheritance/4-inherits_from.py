@@ -4,6 +4,8 @@ This module contains a function that returns True if the
 object is an instance (directly or indirectly)
 of the specified class.
 """
+
+
 def inherits_from(obj, a_class):
     """
     is_same_class - return true if class is subclass, false otherwise
