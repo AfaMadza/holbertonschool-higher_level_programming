@@ -11,11 +11,10 @@ def read_lines(filename="", nb_lines=0):
     Args:
         filename: file's name
     """
-    line_no = 0
+    if nb_lines < 0:
+        nb_lines = 0
     with open(filename, mode='r', encoding='utf-8') as f:
         for line_no, line in enumerate(f):
-            if nb_lines <= 0 or nb_lines > f.seek(0, 2):
-                print(line, end='')
-            else:
-                if line_no <= nb_lines:
-                    print(line, end='')
+            if nb_lines and nb_lines == line_no:
+                break
+            print(line, end='')
