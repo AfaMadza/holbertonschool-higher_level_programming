@@ -3,16 +3,16 @@
 This module contains a function that creates an object
 from a JSON file
 """
+from sys import argv
 save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
-from sys import argv
 
 
 def main():
     """
-    load_from_json_file - creates object from JSON file
+    main - see module description
     Args:
-        filename: file's name
+        None
     """
     try:
         my_list = load_from_json_file('./add_item.json')
