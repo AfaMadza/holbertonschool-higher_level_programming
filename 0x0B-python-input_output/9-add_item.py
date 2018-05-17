@@ -8,7 +8,7 @@ load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 from sys import argv
 
 
-def prog():
+def main():
     """
     load_from_json_file - creates object from JSON file
     Args:
@@ -23,4 +23,4 @@ def prog():
     save_to_json_file(my_list, './add_item.json')
 
 if __name__ == '__main__':
-    prog()
+    main()
