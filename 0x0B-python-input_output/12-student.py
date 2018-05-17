@@ -28,6 +28,11 @@ class Student:
         representation of a Student instance.
         """
         at = attrs
+        if not isinstance(at, list):
+            return self.__dict__
+        for item in at:
+            if not isinstance(item, str):
+                return self.__dict__
         if at:
             return {k: v for (k, v) in self.__dict__.items() if k in at}
         return self.__dict__
