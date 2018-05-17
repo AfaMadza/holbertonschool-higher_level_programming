@@ -13,10 +13,9 @@ def read_lines(filename="", nb_lines=0):
     """
     line_no = 0
     with open(filename, mode='r', encoding='utf-8') as f:
-        for line in f:
+        for line_no, line in enumerate(f):
             if nb_lines <= 0 or nb_lines > f.seek(0, 2):
                 print(line, end='')
             else:
-                line_no += 1
                 if line_no <= nb_lines:
                     print(line, end='')
