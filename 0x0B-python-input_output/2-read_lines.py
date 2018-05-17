@@ -12,7 +12,7 @@ def read_lines(filename="", nb_lines=0):
         filename: file's name
     """
     line_no = 0
-    with open(filename, mode='r', encoding ='utf-8') as f:
+    with open(filename, mode='r', encoding='utf-8') as f:
         for line in f:
             if nb_lines <= 0 or nb_lines > f.seek(0, 2):
                 print(line, end='')
