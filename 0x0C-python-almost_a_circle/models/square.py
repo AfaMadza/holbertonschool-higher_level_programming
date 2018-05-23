@@ -34,7 +34,8 @@ class Square(Rectangle):
         attr = ['id', 'size', 'x', 'y']
         if args and len(args) >= 1:
             for i in range(len(args)):
-                print(args[i])
+                if i > len(attr) - 1:
+                    break
                 setattr(self, attr[i], args[i])
         else:
             for k, v in kwargs.items():
@@ -42,9 +43,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """str magic method"""
-        return "[{}] ({}) {}/{} - {}".format(type(self).__name__,
-                                             self.id, self.x,
-                                             self.y, self.width)
+        return ("[{}] ({}) {}/{} - {}".
+                format(type(self).__name__,self.id, self.x, self.y, self.width))
 
     @property
     def size(self):

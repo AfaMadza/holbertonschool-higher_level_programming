@@ -56,7 +56,10 @@ class Base:
         Args:
             **dictionary: double pointer to dictionary
         """
-        temp_instance = cls(6, 9)
+        if cls.__name__ == "Rectangle":
+            temp_instance = cls(1, 1)
+        if cls.__name__ == "Square":
+            temp_instance = cls(1)
         temp_instance.update(**dictionary)
         return temp_instance
 
@@ -68,13 +71,14 @@ class Base:
         Args:
             list_objs: a list of instances that inherit from Base
         """
-        list_dicts = []
-        for obj in list_objs:
+        if list_objs is None:
+            with open(cls.__name__+'.json', 'w', encoding='utf-8') as f:
+                f.write("[]")
+        else:
+            list_dicts = []
+            for obj in list_objs:
                 list_dicts.append(cls.to_dictionary(obj))
-        with open(cls.__name__+'.json', 'w', encoding='utf-8') as f:
-            if list_dicts is None:
-                f.write(list_dicts)
-            else:
+            with open(cls.__name__+'.json', 'w', encoding='utf-8') as f:
                 f.write(json.dumps(list_dicts))
 
     @classmethod
