@@ -79,7 +79,7 @@ class Base:
             for obj in list_objs:
                 list_dicts.append(cls.to_dictionary(obj))
             with open(cls.__name__+'.json', 'w', encoding='utf-8') as f:
-                f.write(json.dumps(list_dicts))
+                f.write(cls.to_json_string(list_dicts))
 
     @classmethod
     def load_from_file(cls):
