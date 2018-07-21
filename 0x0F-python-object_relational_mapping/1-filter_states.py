@@ -26,7 +26,7 @@ def display_states(db):
     """
     cur = db.cursor()
     cur.execute("SELECT * FROM states "
-                "WHERE name REGEXP '^N' "
+                "WHERE name LIKE BINARY 'N%' "
                 "ORDER BY states.id ASC")
     for row in cur.fetchall():
         print(row)
