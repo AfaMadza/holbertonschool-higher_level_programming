@@ -1,3 +1,3 @@
 #!/bin/bash
 # Sends GET request and diplays response body
-curl -L $1 -X GET
+curl -Ls $1 -X GET
