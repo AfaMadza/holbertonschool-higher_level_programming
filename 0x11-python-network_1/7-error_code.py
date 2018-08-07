@@ -6,7 +6,6 @@ import sys
 import requests
 
 
-
 def error_request(url):
     """
     Takes in URL as parameter, sends a request and displays Body

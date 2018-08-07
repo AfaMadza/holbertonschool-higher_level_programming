@@ -6,7 +6,6 @@ import sys
 import urllib.request
 
 
-
 def error_request(url):
     """
     Takes in URL as parameter, sends a request and displays Body
@@ -18,6 +17,7 @@ def error_request(url):
         print('{}'.format(html.decode('utf8')))
     except urllib.error.HTTPError as err:
         print('Error code: {}'.format(err.code))
+
 
 if __name__ == "__main__":
     url = sys.argv[1]
