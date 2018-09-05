@@ -12,7 +12,8 @@ request(url, function (error, response, body) {
   }
   if (body) {
     body = JSON.stringify(body);
-    fs.writeFile(f, body, 'utf8', function (error) {
+    let data = JSON.parse(body)
+    fs.writeFile(f, data, 'utf8', function (error) {
       if (error) {
         console.log(error);
       }
