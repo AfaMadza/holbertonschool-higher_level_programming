@@ -2,7 +2,7 @@
 const dict = require('./101-data').dict;
 
 function organizeDict (dict) {
-  let objArray = [];
+  let obj = {};
   let valueList = [];
   let newKeys = Object.keys(dict).map(function (key) {
     return dict[key];
@@ -16,11 +16,9 @@ function organizeDict (dict) {
         valueList.push(key);
       }
     }
-    let obj = {};
     obj[newKeys[i]] = valueList;
     valueList = [];
-    objArray.push(obj);
   }
-  console.log(objArray);
+  console.log(obj);
 }
 organizeDict(dict);
