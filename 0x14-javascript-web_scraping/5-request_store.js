@@ -9,10 +9,9 @@ let url = process.argv[2];
 request(url, function (error, response, body) {
   if (error) {
     console.log(error);
-  }
-  if (body) {
+  } else {
     body = JSON.stringify(body);
-    let data = JSON.parse(body)
+    let data = JSON.parse(body);
     fs.writeFile(f, data, 'utf8', function (error) {
       if (error) {
         console.log(error);
